@@ -15,7 +15,7 @@ var officeTrivia = [
 
     {
         question: "How long were Pam and Roy engaged?",
-        choices: ["3 months", "6 Years", "4-5 months", "3-4 years"],
+        choices: ["3 months", "6 years", "4-5 months", "3-4 years"],
         answer: 3
     },
 
@@ -68,12 +68,85 @@ var officeTrivia = [
     },
 ]
 
+
 // Start button function
 $("#start-btn").on("click", function() {
     $(this).hide();
+    $("#inst").hide();
     $("#time").html("<h2>Time Remaining: 90 Seconds</h2>" + "<br>");
     
     startTimer();
+
+    // Display questions & choices 
+    $("#q1").html("<h3>" + officeTrivia[0].question + "</h3>");
+    $("#a1").html("<input type='radio' name='a1' value='0'>" + "<label>" + officeTrivia[0].choices[0] + "</label>"
+        + "<input type='radio' name='a1' value='1'>" + "<label>" + officeTrivia[0].choices[1] + "</label>"
+        + "<input type='radio' name='a1' value='2'>" + "<label>" + officeTrivia[0].choices[2] + "</label>"
+        + "<input type='radio' name='a1' value='3'>" + "<label>" + officeTrivia[0].choices[3] + "</label><br><br>"
+    );
+    
+    $("#q2").html("<h3>" + officeTrivia[1].question + "</h3>");
+    $("#a2").html("<input type='radio' name='a2' value='0'>" + "<label>" + officeTrivia[1].choices[0] + "</label>"
+        + "<input type='radio' name='a2' value='1'>" + "<label>" + officeTrivia[1].choices[1] + "</label>"
+        + "<input type='radio' name='a2' value='2'>" + "<label>" + officeTrivia[1].choices[2] + "</label>"
+        + "<input type='radio' name='a2' value='3'>" + "<label>" + officeTrivia[1].choices[3] + "</label><br><br>"
+    );
+    
+    $("#q3").html("<h3>" + officeTrivia[2].question + "</h3>");
+    $("#a3").html("<input type='radio' name='a3' value='0'>" + "<label>" + officeTrivia[2].choices[0] + "</label>"
+        + "<input type='radio' name='a3' value='1'>" + "<label>" + officeTrivia[2].choices[1] + "</label>"
+        + "<input type='radio' name='a3' value='2'>" + "<label>" + officeTrivia[2].choices[2] + "</label>"
+        + "<input type='radio' name='a3' value='3'>" + "<label>" + officeTrivia[2].choices[3] + "</label><br><br>"
+    );
+    
+    $("#q4").html("<h3>" + officeTrivia[3].question + "</h3>");
+    $("#a4").html("<input type='radio' name='a4' value='0'>" + "<label>" + officeTrivia[3].choices[0] + "</label>"
+        + "<input type='radio' name='a4' value='1'>" + "<label>" + officeTrivia[3].choices[1] + "</label>"
+        + "<input type='radio' name='a4' value='2'>" + "<label>" + officeTrivia[3].choices[2] + "</label>"
+        + "<input type='radio' name='a4' value='3'>" + "<label>" + officeTrivia[3].choices[3] + "</label><br><br>"
+    );
+    
+    $("#q5").html("<h3>" + officeTrivia[4].question + "</h3>");
+    $("#a5").html("<input type='radio' name='a5' value='0'>" + "<label>" + officeTrivia[4].choices[0] + "</label>"
+        + "<input type='radio' name='a5' value='1'>" + "<label>" + officeTrivia[4].choices[1] + "</label>"
+        + "<input type='radio' name='a5' value='2'>" + "<label>" + officeTrivia[4].choices[2] + "</label>"
+        + "<input type='radio' name='a5' value='3'>" + "<label>" + officeTrivia[4].choices[3] + "</label><br><br>"
+    );
+    
+    $("#q6").html("<h3>" + officeTrivia[5].question + "</h3>");
+    $("#a6").html("<input type='radio' name='a6' value='0'>" + "<label>" + officeTrivia[5].choices[0] + "</label>"
+        + "<input type='radio' name='a6' value='1'>" + "<label>" + officeTrivia[5].choices[1] + "</label>"
+        + "<input type='radio' name='a6' value='2'>" + "<label>" + officeTrivia[5].choices[2] + "</label>"
+        + "<input type='radio' name='a6' value='3'>" + "<label>" + officeTrivia[5].choices[3] + "</label><br><br>"
+    );
+    
+    $("#q7").html("<h3>" + officeTrivia[6].question + "</h3>");
+    $("#a7").html("<input type='radio' name='a7' value='0'>" + "<label>" + officeTrivia[6].choices[0] + "</label>"
+        + "<input type='radio' name='a7' value='1'>" + "<label>" + officeTrivia[6].choices[1] + "</label>"
+        + "<input type='radio' name='a7' value='2'>" + "<label>" + officeTrivia[6].choices[2] + "</label>"
+        + "<input type='radio' name='a7' value='3'>" + "<label>" + officeTrivia[6].choices[3] + "</label><br><br>"
+    );
+    
+    $("#q8").html("<h3>" + officeTrivia[7].question + "</h3>");
+    $("#a8").html("<input type='radio' name='a8' value='0'>" + "<label>" + officeTrivia[7].choices[0] + "</label>"
+        + "<input type='radio' name='a8' value='1'>" + "<label>" + officeTrivia[7].choices[1] + "</label>"
+        + "<input type='radio' name='a8' value='2'>" + "<label>" + officeTrivia[7].choices[2] + "</label>"
+        + "<input type='radio' name='a8' value='3'>" + "<label>" + officeTrivia[7].choices[3] + "</label><br><br>"
+    );
+    
+    $("#q9").html("<h3>" + officeTrivia[8].question + "</h3>");
+    $("#a9").html("<input type='radio' name='a9' value='0'>" + "<label>" + officeTrivia[8].choices[0] + "</label>"
+        + "<input type='radio' name='a9' value='1'>" + "<label>" + officeTrivia[8].choices[1] + "</label>"
+        + "<input type='radio' name='a9' value='2'>" + "<label>" + officeTrivia[8].choices[2] + "</label>"
+        + "<input type='radio' name='a9' value='3'>" + "<label>" + officeTrivia[8].choices[3] + "</label><br><br>"
+    );
+    
+    $("#q10").html("<h3>" + officeTrivia[9].question + "</h3>");
+    $("#a10").html("<input type='radio' name='a10' value='0'>" + "<label>" + officeTrivia[9].choices[0] + "</label>"
+        + "<input type='radio' name='a10' value='1'>" + "<label>" + officeTrivia[9].choices[1] + "</label>"
+        + "<input type='radio' name='a10' value='2'>" + "<label>" + officeTrivia[9].choices[2] + "</label>"
+        + "<input type='radio' name='a10' value='3'>" + "<label>" + officeTrivia[9].choices[3] + "</label><br><br>"
+    );
 })
 
 // Create timer countdown function
