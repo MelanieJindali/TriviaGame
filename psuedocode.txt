@@ -1,0 +1,17 @@
+1. When the start game button is clicked:
+    - start button disappears
+    - timer appears and starts countdown
+    - list of questions & choices appear on screen
+
+2. If timer runs out:
+    - questions disappear 
+    - display "Times Up!"
+    - display correct answers, inccorect answers, and unanswered questions
+
+3. If user clicks done button:
+    - questions disappear
+    - display "All finished!"
+    - display correct answers, inccorect answers, and unanswered questions
+
+4. Choices:
+    - user can only make 1 choice for each question
