@@ -74,4 +74,11 @@ function startTimer() {
     intervalId = setInterval(decrement, 1000)
 }
 
+// Decreasing timer by 1 sec
+function decrement() {
+    quizTimer--;
+    $("#time").html("<h2>Time is ticking!: " + quizTimer + " seconds left</h2>" + "<br>");
+    }
+}
+
 });
