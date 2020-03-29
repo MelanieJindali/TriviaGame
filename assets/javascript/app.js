@@ -78,7 +78,15 @@ function startTimer() {
 function decrement() {
     quizTimer--;
     $("#time").html("<h2>Time is ticking!: " + quizTimer + " seconds left</h2>" + "<br>");
+
+        if (quizTimer === 0) {
+        stop();
     }
+}
+
+// Stop function which will clear the interval
+function stop() {
+    clearInterval(intervalId);
 }
 
 });
