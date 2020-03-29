@@ -68,6 +68,14 @@ var officeTrivia = [
     },
 ]
 
+// Start button function
+$("#start-btn").on("click", function() {
+    $(this).hide();
+    $("#time").html("<h2>Time Remaining: 90 Seconds</h2>" + "<br>");
+    
+    startTimer();
+})
+
 // Create timer countdown function
 function startTimer() {
     clearInterval(intervalId);
@@ -77,7 +85,7 @@ function startTimer() {
 // Decreasing timer by 1 sec
 function decrement() {
     quizTimer--;
-    $("#time").html("<h2>Time is ticking!: " + quizTimer + " seconds left</h2>" + "<br>");
+    $("#time").html("<h2>Time Remaining: " + quizTimer + " Seconds</h2>" + "<br>");
 
         if (quizTimer === 0) {
         stop();
