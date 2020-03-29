@@ -1,6 +1,7 @@
 $(document).ready(function() {
 // Variables in Global Scope
-var quizTimer = (1000 * 90)
+var quizTimer = 90;
+var intervalId;
 var choices;
 var correctAnswer = 0;
 var incorrectAnswer = 0;
@@ -66,5 +67,11 @@ var officeTrivia = [
         answer: 1
     },
 ]
+
+// Create timer countdown function
+function startTimer() {
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000)
+}
 
 });
