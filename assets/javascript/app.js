@@ -68,7 +68,6 @@ var officeTrivia = [
     },
 ]
 
-
 // Start button function
 $("#start-btn").on("click", function() {
     $(this).hide();
@@ -147,15 +146,19 @@ $("#start-btn").on("click", function() {
         + "<input type='radio' name='a10' value='2'>" + "<label>" + officeTrivia[9].choices[2] + "</label>"
         + "<input type='radio' name='a10' value='3'>" + "<label>" + officeTrivia[9].choices[3] + "</label><br><br>"
     );
+
+    $("#submit").html("<button>Submit</button>")
 })
 
 // Create timer countdown function
 function startTimer() {
     clearInterval(intervalId);
+
+    // Decreasing timer by 1 sec
     intervalId = setInterval(decrement, 1000)
 }
 
-// Decreasing timer by 1 sec
+// Timer decreaser
 function decrement() {
     quizTimer--;
     $("#time").html("<h2>Time Remaining: " + quizTimer + " Seconds</h2>" + "<br>");
