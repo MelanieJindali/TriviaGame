@@ -1,6 +1,6 @@
 $(document).ready(function() {
 // Variables in Global Scope
-var quizTimer = 90;
+var quizTimer = 30;
 var intervalId;
 var correctAnswer = 0;
 var incorrectAnswer = 0;
@@ -71,7 +71,7 @@ var officeTrivia = [
 $("#start-btn").on("click", function() {
     $(this).hide();
     $("#inst").hide();
-    $("#time").html("<h2>Time Remaining: 90 Seconds</h2>" + "<br>");
+    $("#time").html("<h2>Time Remaining: 30 Seconds</h2>" + "<br>");
     
     startTimer();
 
@@ -148,8 +148,9 @@ $("#start-btn").on("click", function() {
 
     $("#submit").html("<button>Submit</button>")
     $("#submit").on("click", function() {
-       scoreChk(); 
-       showResults();
+        scoreChk(); 
+        stop();
+        showResults();
     })
 })
 
@@ -168,20 +169,42 @@ function decrement() {
 
         if (quizTimer === 0) {
 
-        stop();
         scoreChk();
-        showResults();
+        stop();
     }
 }
 
 // Stop function which will clear the interval
 function stop() {
     clearInterval(intervalId);
+    showResults();
 }
 
 // Score checker
 function scoreChk() {
-
+    var userChoices = [
+        $("input[name='a1']:checked").val(),
+        $("input[name='a2']:checked").val(),
+        $("input[name='a3']:checked").val(),
+        $("input[name='a4']:checked").val(),
+        $("input[name='a5']:checked").val(),
+        $("input[name='a6']:checked").val(),
+        $("input[name='a7']:checked").val(),
+        $("input[name='a8']:checked").val(),
+        $("input[name='a9']:checked").val(),
+        $("input[name='a10']:checked").val()
+    ]
+for (i = 0; i <= officeTrivia.length; i++){
+    if (userChoices[i] === undefined) {
+        unanswered++;
+    }
+    else if (userChoices[i] == officeTrivia[i].answer) {
+        correctAnswer++;
+    }
+    else {
+        incorrectAnswer++;
+    }
+}
 }
 
 // Show results only, hide everyting else
@@ -213,6 +236,7 @@ function showResults() {
     $("#correct").html("Correct Answers: " + correctAnswer);
     $("#incorrect").html("Incorrect Answers: " + incorrectAnswer);
     $("#unanswered").html("Unanswered Questions: " + unanswered);
+    console.log("Unansered", unanswered)
 }
 
 });
