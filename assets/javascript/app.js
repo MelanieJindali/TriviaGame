@@ -194,17 +194,18 @@ function scoreChk() {
         $("input[name='a9']:checked").val(),
         $("input[name='a10']:checked").val()
     ]
-for (i = 0; i <= officeTrivia.length; i++){
-    if (userChoices[i] === undefined) {
-        unanswered++;
+
+    for (i = 0; i < officeTrivia.length; i++){
+        if (userChoices[i] === undefined) {
+            unanswered++;
+        }
+        else if (userChoices[i] == officeTrivia[i].answer) {
+            correctAnswer++;
+        }
+        else {
+            incorrectAnswer++;
+        }
     }
-    else if (userChoices[i] == officeTrivia[i].answer) {
-        correctAnswer++;
-    }
-    else {
-        incorrectAnswer++;
-    }
-}
 }
 
 // Show results only, hide everyting else
@@ -236,7 +237,7 @@ function showResults() {
     $("#correct").html("Correct Answers: " + correctAnswer);
     $("#incorrect").html("Incorrect Answers: " + incorrectAnswer);
     $("#unanswered").html("Unanswered Questions: " + unanswered);
-    console.log("Unansered", unanswered)
+
 }
 
 });
