@@ -2,7 +2,6 @@ $(document).ready(function() {
 // Variables in Global Scope
 var quizTimer = 90;
 var intervalId;
-var choices;
 var correctAnswer = 0;
 var incorrectAnswer = 0;
 var unanswered = 0;
@@ -148,6 +147,10 @@ $("#start-btn").on("click", function() {
     );
 
     $("#submit").html("<button>Submit</button>")
+    $("#submit").on("click", function() {
+       scoreChk(); 
+       showResults();
+    })
 })
 
 // Create timer countdown function
@@ -164,13 +167,52 @@ function decrement() {
     $("#time").html("<h2>Time Remaining: " + quizTimer + " Seconds</h2>" + "<br>");
 
         if (quizTimer === 0) {
+
         stop();
+        scoreChk();
+        showResults();
     }
 }
 
 // Stop function which will clear the interval
 function stop() {
     clearInterval(intervalId);
+}
+
+// Score checker
+function scoreChk() {
+
+}
+
+// Show results only, hide everyting else
+function showResults() {
+    $("#time").hide();
+    $("#q1").hide();
+    $("#q2").hide();
+    $("#q3").hide();
+    $("#q4").hide();
+    $("#q5").hide();
+    $("#q6").hide();
+    $("#q7").hide();
+    $("#q8").hide();
+    $("#q9").hide();
+    $("#q10").hide();
+    $("#a1").hide();
+    $("#a2").hide();
+    $("#a3").hide();
+    $("#a4").hide();
+    $("#a5").hide();
+    $("#a6").hide();
+    $("#a7").hide();
+    $("#a8").hide();
+    $("#a9").hide();
+    $("#a10").hide();
+    $("#submit").hide();
+
+    $("#results").html("<h2>Here are your results!</h2>");
+    $("#correct").html("Correct Answers: " + correctAnswer);
+    $("#incorrect").html("Incorrect Answers: " + incorrectAnswer);
+    $("#unanswered").html("Unanswered Questions: " + unanswered);
 }
 
 });
