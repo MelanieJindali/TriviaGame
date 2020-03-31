@@ -1,5 +1,6 @@
 $(document).ready(function() {
 // Variables in Global Scope
+var audio = new Audio("assets/audio/office.mp3")
 var quizTimer = 30;
 var intervalId;
 var correctAnswer = 0;
@@ -72,9 +73,9 @@ $("#start-btn").on("click", function() {
     $(this).hide();
     $("#inst").hide();
     $("#time").html("<h2>Time Remaining: 30 Seconds</h2>" + "<br>");
-    
+    audio.play();
     startTimer();
-
+    
     // Display questions & choices 
     $("#q1").html("<h3>" + officeTrivia[0].question + "</h3>");
     $("#a1").html("<input type='radio' name='a1' value='0'>" + "<label>" + officeTrivia[0].choices[0] + "</label>"
