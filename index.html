@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap" rel="stylesheet">
     <title>The Office Trivia Game</title>
 </head>
 <body>
     <div class="container">
+    
+        <h1><img src="assets/images/TheOfficeLogo.jpg" alt="the office"><br> Trivia Game!</h1>
 
-        <h1>The Office Trivia Game!</h1>
         <div id="inst">
             <p>You will have 30 seconds to answer 10 questions relating to the show "The Office". The game will end once the timer runs out. </p>
-
             <div>
                 <h3>Click the 'Start' button to begin the game!</h3>
                 <button id="start-btn">Start</button>
@@ -19,6 +21,7 @@
         </div>
 
 
+        <div class="game">
         <div id="time"></div>
 
         <div id="q1"></div>
@@ -57,7 +60,7 @@
         <div id="correct"></div>
         <div id="incorrect"></div>
         <div id="unanswered"></div>
-
+        </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>

@@ -1,0 +1,39 @@
+body {
+    background-image: url('/assets/images/DunderMifflin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0px;
+}
+
+h1 {
+    color: white;
+    background-color:rgb(10,6,7);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    margin-top: 0%;
+    margin-left: 0%;
+}
+
+img {
+    height: 25%;
+    width: 25%;
+}
+
+.container {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+#inst, .game {
+    background-color: white;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 5px 10px 5px;
+    font-family: 'Muli', sans-serif;
+}
+
