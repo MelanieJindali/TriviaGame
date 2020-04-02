@@ -16,7 +16,7 @@ h1 {
     margin-left: 0%;
 }
 
-img {
+.banner {
     height: 25%;
     width: 25%;
 }
@@ -37,3 +37,8 @@ img {
     font-family: 'Muli', sans-serif;
 }
 
+#cast {
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+}

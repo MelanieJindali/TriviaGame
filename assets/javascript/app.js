@@ -238,6 +238,7 @@ function showResults() {
     $("#correct").html("Correct Answers: " + correctAnswer);
     $("#incorrect").html("Incorrect Answers: " + incorrectAnswer);
     $("#unanswered").html("Unanswered Questions: " + unanswered);
+    $("#cast").html('<img id="cast" src="assets/images/TheOffice.jpg" />');
 
 }
 
